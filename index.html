@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>AK Market</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-lKuw3fvlT6tFRP6LlWKPDCVRt16M2NrOsPE7X7Ff1Wl2O4o78W/d1BrQWTt6L4N2" crossorigin="anonymous">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js?client=ca-pub-4686114452247264" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/paginate-js"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="icon" type="image/png" href="icons/logo.png"> <!-- Substitua pelo caminho do seu ícone -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: linear-gradient(to right, #007bff, #00b0ff);">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: #ffffff;">AK MARKET</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://chat.whatsapp.com/JetNEsbTQknGwdhDEiowap" style="color: #ffffff;">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+      
+
+    <div class="container mt-5">
+        <div class="mx-auto outlined-box d-flex flex-column">
+            <div class="table-header d-flex justify-content-between mb-4 align-items-center">
+                <h2 class="text-center mb-0">Itens Anunciados</h2>
+                <div class="search-bar-container ml-auto">
+                    <input type="text" class="form-control" placeholder="Pesquisar...">
+                </div>
+                
+            </div>
+            <div class="row card-container" id="item-list">
+                <!-- Cards serão adicionados aqui dinamicamente -->
+            </div>
+            <p class="text-center mt-3">Por favor, note que para enviar mensagens de vários itens, todos os itens devem ser do mesmo vendedor.</p>
+            <nav aria-label="Navegação de página" class="bottom-right">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <button class="btn btn-sm btn-primary meu-botao mr-2" id="prev-btn" aria-label="Anterior">
+                            <span aria-hidden="true">« Anterior</span>
+                        </button>
+                    </li>
+                    <li class="page-item">
+                        <button class="btn btn-sm btn-primary meu-botao ml-2" id="next-btn" aria-label="Próximo">
+                            <span aria-hidden="true">Próximo »</span>
+                        </button>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="card mx-auto shopping-cart">
+            <div class="card-body">
+                <h5 class="card-title">Carrinho de Compras</h5>
+                <p class="card-text">Por favor, note que para enviar mensagens de vários itens, todos os itens devem ser do mesmo vendedor.</p>
+                <div class="table-responsive">
+                    <table class="table" id="cart-list">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Vendedor</th>
+                                <th scope="col">Valor</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="total"></div>
+                <button id="finalize-purchase-button" class="btn btn-primary btn-block mt-3">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <footer class="text-center py-3" style="background: linear-gradient(to right, #010129,  #000047, #055ab6, #007bff); color: #ffffff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-left">
+                    <img src="img/iconeaika-removebg-preview.png" alt="Logo" style="width: 120px; height: auto;">
+                </div>
+                <div class="col-md-6 text-center">
+                    <h2>AK MARKET</h2>
+                    <p>Aqui você pode comprar, vender e negociar seus itens do Aika.</p>
+                    <p>Um mercado online, criado por Ruan Pontes.</p>
+                </div>
+                <div class="col-md-3 ">
+                    <h3>Com dúvidas?</h3>
+                    <p><a href="https://chat.whatsapp.com/JetNEsbTQknGwdhDEiowap" target="_blank" style="color: #ffffff;">Entre no nosso grupo do WhatsApp</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Copyright AK - 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
